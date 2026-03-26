@@ -18,3 +18,16 @@ def test_basic_auth_successful():
     basic_auth = BasicAuthPage(driver)
     assert basic_auth.is_logging_successful()
 
+def test_basic_auth_fail():
+    driver = webdriver.Chrome()
+    driver.get("https://the-internet.herokuapp.com/")
+
+    homepage = HomePage(driver)
+    homepage.click_basic_auth()
+
+    pyautogui.press("esc")
+
+    basic_auth = BasicAuthPage(driver)
+    assert basic_auth.is_logging_fail()
+
+
