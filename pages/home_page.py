@@ -6,6 +6,7 @@ class HomePage(BasePage):
     FORM_AUTH_LINK = (By.XPATH, "//a[text()='Form Authentication']")
     ADD_REMOVE_ELEMENT_LINK = (By.XPATH, '//a[contains(text(), "Add/Remove Elements")]')
     BASIC_AUTH_LINK = (By.XPATH, "//a[text()='Basic Auth']")
+    CHECKBOXES_LINK = (By.XPATH, "//a[text()='Checkboxes']")
 
     def click_form_auth(self):
         self.click(self.FORM_AUTH_LINK)
@@ -15,3 +16,6 @@ class HomePage(BasePage):
 
     def click_basic_auth(self):
         self.click(self.BASIC_AUTH_LINK)
+
+    def click_checkboxes(self):
+        self.click(self.CHECKBOXES_LINK)
