@@ -1,5 +1,6 @@
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.action_chains import ActionChains
 
 class BasePage:
     def __init__(self, driver):
@@ -29,4 +30,7 @@ class BasePage:
     def send_keys(self, locator, text):
         self.wait_for_element_visible(locator).send_keys(text)
 
-
+    def right_click_element(self, locator):
+        element = self.wait_for_element_visible(locator)
+        actions = ActionChains(self.driver)
+        actions.context_click(element).perform()
