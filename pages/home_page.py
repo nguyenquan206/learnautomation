@@ -8,6 +8,7 @@ class HomePage(BasePage):
     BASIC_AUTH_LINK = (By.XPATH, "//a[text()='Basic Auth']")
     CHECKBOXES_LINK = (By.XPATH, "//a[text()='Checkboxes']")
     CONTEXT_MENU_LINK = (By.XPATH, "//a[text()='Context Menu']")
+    DISAPPEAR_ELEMENT_LINK = (By.XPATH, "//a[text()='Disappearing Elements']")
 
     def click_form_auth(self):
         self.click(self.FORM_AUTH_LINK)
@@ -23,3 +24,6 @@ class HomePage(BasePage):
 
     def click_context_menu(self):
         self.click(self.CONTEXT_MENU_LINK)
+
+    def click_disappear_element(self):
+        self.click(self.DISAPPEAR_ELEMENT_LINK)
