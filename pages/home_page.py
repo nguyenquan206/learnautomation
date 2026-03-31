@@ -9,6 +9,7 @@ class HomePage(BasePage):
     CHECKBOXES_LINK = (By.XPATH, "//a[text()='Checkboxes']")
     CONTEXT_MENU_LINK = (By.XPATH, "//a[text()='Context Menu']")
     DISAPPEAR_ELEMENT_LINK = (By.XPATH, "//a[text()='Disappearing Elements']")
+    DRAG_DROP_LINK = (By.XPATH, "//a[text()='Drag and Drop']")
 
     def click_form_auth(self):
         self.click(self.FORM_AUTH_LINK)
@@ -27,3 +28,6 @@ class HomePage(BasePage):
 
     def click_disappear_element(self):
         self.click(self.DISAPPEAR_ELEMENT_LINK)
+
+    def click_drag_drop_link(self):
+        self.click(self.DRAG_DROP_LINK)
