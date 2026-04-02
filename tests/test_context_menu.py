@@ -2,8 +2,7 @@ from selenium import webdriver
 from pages.home_page import HomePage
 from pages.context_menu_page import ContextMenuPage
 
-def test_context_menu():
-    driver = webdriver.Chrome()
+def test_context_menu(driver):
     driver.get("https://the-internet.herokuapp.com/")
 
     homepage = HomePage(driver)

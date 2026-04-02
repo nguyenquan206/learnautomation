@@ -4,8 +4,7 @@ from selenium import webdriver
 from pages.home_page import HomePage
 from pages.checkboxes_page import Checkboxes
 
-def test_checkboxes_page():
-    driver = webdriver.Chrome()
+def test_checkboxes_page(driver):
     driver.get("https://the-internet.herokuapp.com/")
 
     homepage = HomePage(driver)

@@ -4,8 +4,7 @@ from selenium import webdriver
 from pages.home_page import HomePage
 from pages.add_remove_element_page import AddRemoveElementPage
 
-def test_add_remove_elements():
-    driver = webdriver.Chrome()
+def test_add_remove_elements(driver):
     driver.get("https://the-internet.herokuapp.com/")
 
     home_page = HomePage(driver)
