@@ -5,8 +5,7 @@ import time
 from pages.login_page import LoginPage
 
 
-def test_login_successfully():
-    driver = webdriver.Chrome()
+def test_login_successfully(driver):
     driver.get("https://the-internet.herokuapp.com/")
 
     homepage = HomePage(driver)
@@ -21,8 +20,7 @@ def test_login_successfully():
 
     driver.quit()
 
-def test_login_fail():
-    driver = webdriver.Chrome()
+def test_login_fail(driver):
     driver.get("https://the-internet.herokuapp.com/")
     homepage = HomePage(driver)
     homepage.click_form_auth()
