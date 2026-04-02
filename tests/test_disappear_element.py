@@ -2,8 +2,7 @@ from selenium import webdriver
 from pages.home_page import HomePage
 from pages.disappear_element_page import DisappearElementPage
 
-def test_disappear_element_page():
-    driver = webdriver.Chrome()
+def test_disappear_element_page(driver):
     driver.get("https://the-internet.herokuapp.com/")
 
     homepage = HomePage(driver)
