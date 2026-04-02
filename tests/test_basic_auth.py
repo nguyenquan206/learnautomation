@@ -1,10 +1,11 @@
 from selenium import webdriver
 from pages.home_page import HomePage
 from pages.basic_auth_page import BasicAuthPage
-import pyautogui
+import pytest
 
-def test_basic_auth_successful():
-    driver = webdriver.Chrome()
+@pytest.mark.skip_ci
+def test_basic_auth_successful(driver):
+    import pyautogui
     driver.get("https://the-internet.herokuapp.com/")
 
     homepage = HomePage(driver)
@@ -18,8 +19,9 @@ def test_basic_auth_successful():
     basic_auth = BasicAuthPage(driver)
     assert basic_auth.is_logging_successful()
 
-def test_basic_auth_fail():
-    driver = webdriver.Chrome()
+@pytest.mark.skip_ci
+def test_basic_auth_fail(driver):
+    import pyautogui
     driver.get("https://the-internet.herokuapp.com/")
 
     homepage = HomePage(driver)
