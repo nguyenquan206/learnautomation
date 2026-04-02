@@ -20,4 +20,4 @@ jobs:
     - uses: browser-actions/setup-chrome@v1
     - uses: nanasess/setup-chromedriver@v2
 
-    - run: pytest -s
+    - run: pytest -s -m "not skip_ci"
