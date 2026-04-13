@@ -11,6 +11,7 @@ class HomePage(BasePage):
     DISAPPEAR_ELEMENT_LINK = (By.XPATH, "//a[text()='Disappearing Elements']")
     DRAG_DROP_LINK = (By.XPATH, "//a[text()='Drag and Drop']")
     DROPDOWN_LINK = (By.XPATH, "//a[text()='Dropdown']")
+    DYNAMIC_CONTENT_LINK = (By.XPATH, "//a[text()='Dynamic Content']")
 
     def click_form_auth(self):
         self.click(self.FORM_AUTH_LINK)
@@ -35,3 +36,6 @@ class HomePage(BasePage):
 
     def click_dropdown_link(self):
         self.click(self.DROPDOWN_LINK)
+
+    def click_dynamic_content(self):
+        self.click(self.DYNAMIC_CONTENT_LINK)
