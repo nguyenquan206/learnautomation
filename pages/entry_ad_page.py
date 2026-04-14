@@ -17,7 +17,8 @@ class EntryAdPage(BasePage):
         )
 
     def close_modal(self):
-        self.click(self.CLOSE_BUTTON)
+        element = self.wait_for_element_clickable(self.CLOSE_BUTTON)
+        element.click()
 
     def refresh_page(self):
         self.driver.refresh()
@@ -28,4 +29,9 @@ class EntryAdPage(BasePage):
 
         WebDriverWait(self.driver, 5).until(
             lambda d: d.execute_script("return window.localStorage.getItem('seen')") is None
+        )
+
+    def wait_for_element_clickable(self, locator, timeout=10):
+        return WebDriverWait(self.driver, timeout).until(
+            EC.element_to_be_clickable(locator)
         )
