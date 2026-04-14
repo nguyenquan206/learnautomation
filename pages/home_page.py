@@ -12,6 +12,7 @@ class HomePage(BasePage):
     DRAG_DROP_LINK = (By.XPATH, "//a[text()='Drag and Drop']")
     DROPDOWN_LINK = (By.XPATH, "//a[text()='Dropdown']")
     DYNAMIC_CONTENT_LINK = (By.XPATH, "//a[text()='Dynamic Content']")
+    ENTRY_AD_LINK = (By.XPATH, "//a[text()='Entry Ad']")
 
     def click_form_auth(self):
         self.click(self.FORM_AUTH_LINK)
@@ -39,3 +40,6 @@ class HomePage(BasePage):
 
     def click_dynamic_content(self):
         self.click(self.DYNAMIC_CONTENT_LINK)
+
+    def click_entry_ad_link(self):
+        self.click(self.ENTRY_AD_LINK)
